@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TT - experiments</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="firebase-config.js"></script>
+<script type="module" src="script.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+<header>
+    <div class="logo">Topic Tutor</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <div class="dropdown">
+  <a href="filter.html" class="dropbtn">Subjects</a>
+  <div class="dropdown-content">
+    <a href="math.html">Maths</a>
+    <a href="physics.html">Physics</a>
+    <a href="chem.html">Chemistry</a>
+    <a href="bio.html">Biology</a>
+    <a href="zoo.html">Zoology</a>
+  </div>
+</div>
+<li><a href="exp.html">Experiments</a></li>
+<li><a href="explore.html">Explore Exams</a></li>
+        <li><a href="about us.html">About us</a></li>
+       
+  </div>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero">
+    <h1>Home Safe Experiments</h1>
+    <p>lets fall in love with the process of learning</p>
+  </section>
+<input type="text" id="searchInput" placeholder="Search topics..." onkeyup="searchJSON()" />
+<div id="result"></div>
+ <div class="video-card" data-topic="easy physics chemistry experiment slime ">
+  <h3>5 easy experiments </h3>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/ekUbBot8tDA?si=ymMeIfJLDj-u767V" title="YouTube video player" 
+  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+ </div>
+ <div class="video-card" data-topic="chemistry physics">
+  <h3>level 1 to 100 experiments</h3>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/s9ALylTC9YQ?si=EO3yV9kmMRkT5nox" title="YouTube video player" 
+  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   </div>
+  <div class="video-card"data-topic="physics center of gravity">
+    <h3>center of gravity</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/CBLe7z8XrMM?si=-kcQwo6Zuud8e9rA" title="YouTube video player" 
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  <div class="video-card" data-topic="bernoulli's principle physics">
+    <h3>Bernoulli's principle</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/KD5A4wVH7Uk?si=m6x3xyJquv6_mxJ-" title="YouTube video player" 
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Topic Tutor. All rights reserved.</p>
+  </footer>
+</body>
+</html>

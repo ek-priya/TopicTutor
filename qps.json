@@ -1,0 +1,86 @@
+[
+  {
+    "exam": "NEET",
+    "subject": "Biology",
+    "year": 2023,
+    "link": "https://example.com/qps/neet_bio_2023.pdf"
+  },
+  {
+    "exam":"POLYCET",
+    "subject":"maths physics chemistry",
+    "year":2024,
+    "link":"https://polycetap.nic.in/Old_Qp.pdf"
+  },
+  {
+    "exam":"POLYCET",
+    "subject":"maths physics chemistry",
+    "year":2023,
+    "link":"https://static.collegedekho.com/media/uploads/2025/01/09/old_qp-1.pdf"
+  },
+  {
+    "exam":"POLYCET",
+    "subject":"maths physics chemistry",
+    "year":2021,
+    "link":"https://static.collegedekho.com/media/uploads/2025/01/08/1711971624php2mfw5r.pdf"
+  },
+  {
+    "exam":"POLYCET",
+    "subject":"maths physics chemistry",
+    "year":2020,
+    "link":"https://static.collegedekho.com/media/uploads/2025/01/09/ap-polycet-2020-question-paper.pdf"
+  },
+  {
+    "exam":"POLYCET",
+    "subject":"maths physics chemistry",
+    "year":2019,
+    "link":"https://www.vedantu.com/exams/ap-polycet-question-paper-2019"
+  },
+  {
+    "exam":"indian national olympiad (ino)",
+    "subject":"astronomy",
+    "year":2023,
+    "link":"https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2023/01/INAO2023-Question.pdf"
+  },
+  {
+    "exam":"indian national olympiad (ino)",
+    "subject":"maths physics chemistry astronomy jr.science biology",
+    "year":2008 ,
+    "link":"https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/"
+},
+{
+    "exam":"Kishore Vigyan Protsahan Yojana (KVPY)",
+    "subject":"maths physics chemistry biology",
+    "year":"2010 2011 2012 2013 2014 2015 2016  2017 2018",
+    "link":"https://www-mathongo-com.translate.goog/exams/kvpy-previous-year-question-paper?// _x_tr_sl=en&_x_tr_tl=hi&_x_tr_hl=hi&_x_tr_pto=tc"
+},
+{
+    "exam":"jee mains",
+    "subject":"maths physics chemistry",
+    "year":"2010 2011 2012 2013 2014 2015 2016  2017 2018 2019 2020 2021 2022 2023 2024 2025",
+    "link":"https://www.shiksha.com/engineering/jee-main-exam-question-papers?t_source=paid&utm_source=google&utm_medium=cpc&utm_campaign=Engineering_jee_SN_India-ds-jeemain-ques-ay26&gad_source=1&gad_campaignid=19225835656&gclid=Cj0KCQjwjdTCBhCLARIsAEu8bpI-qrPXESMR9_D4f1p1oWcXUF5ANJXtLOtC2LrNJO4Qa2eBeMgFuiAaAr-fEALw_wcB"
+},
+{
+    "exam":"eamcet",
+    "subject":"maths physics chemistry biology zoology",
+    "year":"2010 2011 2012 2013 2014 2015 2016  2017 2018 2019 2020 2021 2022 2023 2024 2025",
+    "link":"https://www.shiksha.com/engineering/ap-eamcet-exam-question-papers"
+},
+{
+    "exam":"NEET",
+    "subject":"physics chemistry biology zoology",
+    "year":"2010 2011 2012 2013 2014 2015 2016  2017 2018 2019 2020 2021 2022 2023 2024 2025",
+    "link":"https://www.selfstudys.com/books/neet-previous-year-paper"
+},
+{
+    "exam":"nda national defence academy",
+    "subject":"maths gat",
+    "year":"2014 2015 2016  2017 2018 2019 2020 2021 2022 2023 2024 2025",
+    "link":"https://www.studyiq.com/articles/nda-previous-year-question-papers/"
+},
+{
+    "exam":"Indian talent olympiad (ito)",
+    "subject":"maths science english General knowledge",
+    "link":"https://www.indiantalent.org/olympiad-sample-papers"
+}
+
+]
