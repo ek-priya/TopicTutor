@@ -78,6 +78,11 @@ GitHub Pages — for deployment
 
 # 📸 Screenshots
 ![Image](https://github.com/user-attachments/assets/72baadcb-22ea-4e2e-ae07-fe80d68689d2)
+
+![Image](https://github.com/user-attachments/assets/d3a2936c-5438-4da1-bfc1-afdb41885a6e)
+
+![Image](https://github.com/user-attachments/assets/2eab249b-e50e-4705-9f78-b677b39d977d)
+
 ---
 
 # 📅 Future Improvements
