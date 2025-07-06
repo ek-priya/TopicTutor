@@ -63,12 +63,10 @@ if (qpContainer && qpTitle && selectedExam) {
     .then(res => res.json())
     .then(data => {
       console.log("Loaded prep.json data:", data);
-      const filtered = data.filter(qp =>{
+      const filtered = data.filter(qp =>
         qp.exam?.toLowerCase() === selectedExam.toLowerCase()
-    })
-      .catch(error => {
-    console.error("Failed to load JSON:", error);
-  });
+    );
+      
 
       if (filtered.length === 0) {
         qpContainer.innerHTML = "<p>No question papers found for this exam.</p>";
@@ -89,6 +87,7 @@ if (qpContainer && qpTitle && selectedExam) {
       qpContainer.innerHTML = "<p>Failed to load question papers.</p>";
       console.error("Error loading QPs:", err);
     });
+    
 }
 
 // ----
@@ -105,12 +104,9 @@ if (videoContainer && videoTitle && selected_Exam) {
       console.log("Loaded prep.json:", data);
       console.log("Selected Exam:", selected_Exam);
 
-      const filtered = data.filter(video =>{
+      const filtered = data.filter(video =>
         video.exam?.toLowerCase() === selected_Exam.toLowerCase()
-    })
-    .catch(error => {
-    console.error("Failed to load JSON:", error);
-  });
+    );
 
       if (filtered.length === 0) {
         videoContainer.innerHTML = "<p>No preparation videos found for this exam.</p>";
