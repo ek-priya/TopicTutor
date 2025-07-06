@@ -63,9 +63,12 @@ if (qpContainer && qpTitle && selectedExam) {
     .then(res => res.json())
     .then(data => {
       console.log("Loaded prep.json data:", data);
-      const filtered = data.filter(qp =>
+      const filtered = data.filter(qp =>{
         qp.exam?.toLowerCase() === selectedExam.toLowerCase()
-      );
+    })
+      .catch(error => {
+    console.error("Failed to load JSON:", error);
+  });;
 
       if (filtered.length === 0) {
         qpContainer.innerHTML = "<p>No question papers found for this exam.</p>";
