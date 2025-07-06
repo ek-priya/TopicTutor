@@ -60,8 +60,39 @@ if (qpContainer && qpTitle && selectedExam) {
   fetch("data/qps.json")
     .then(res => res.json())
     .then(data => {
-      console.log("Loaded qps.json data:", data);
+      const filtered = data.filter(qp =>
+        qp.exam?.toLowerCase() === selectedExam.toLowerCase()
+      );
 
+      if (filtered.length === 0) {
+        qpContainer.innerHTML = "<p>No question papers found for this exam.</p>";
+        return;
+      }
+
+      filtered.forEach(qp => {
+        const div = document.createElement("div");
+        div.className = "video-block";
+        div.innerHTML = `
+          <h3>${qp.subject} (${qp.year})</h3>
+          <a href="${qp.link}" target="_blank">📄 View PDF</a>
+          <hr>`;
+        qpContainer.appendChild(div);
+      });
+    })
+    .catch(err => {
+      qpContainer.innerHTML = "<p>Failed to load question papers.</p>";
+      console.error("Error loading QPs:", err);
+    });
+}
+const qpTitle = document.getElementById("examTitle");
+const qpContainer = document.getElementById("qpContainer");
+
+if (qpContainer && qpTitle && selectedExam) {
+  qpTitle.textContent = `${selectedExam} - Previous Year Question Papers`;
+
+  fetch("data/qps.json")
+    .then(res => res.json())
+    .then(data => {
       const filtered = data.filter(qp =>
         qp.exam?.toLowerCase() === selectedExam.toLowerCase()
       );
@@ -90,6 +121,7 @@ if (qpContainer && qpTitle && selectedExam) {
 // --------------------------------------
 // Prep Video Page Logic (prep.json)
 // --------------------------------------
+const selectedExam = new URLSearchParams(window.location.search).get("exam");
 const videoTitle = document.getElementById("videoTitle");
 const videoContainer = document.getElementById("videoContainer");
 
@@ -99,9 +131,6 @@ if (videoContainer && videoTitle && selectedExam) {
   fetch("data/prep.json")
     .then(res => res.json())
     .then(data => {
-      console.log("Loaded prep.json:", data);
-      console.log("Selected Exam:", selectedExam);
-
       const filtered = data.filter(video =>
         video.exam?.toLowerCase() === selectedExam.toLowerCase()
       );
@@ -133,6 +162,4 @@ if (videoContainer && videoTitle && selectedExam) {
       videoContainer.innerHTML = "<p>Failed to load videos.</p>";
       console.error("Error loading videos:", err);
     });
-} else {
-  console.warn("Page loaded without selectedExam in URL or missing DOM elements");
 }
