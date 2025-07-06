@@ -68,7 +68,7 @@ if (qpContainer && qpTitle && selectedExam) {
     })
       .catch(error => {
     console.error("Failed to load JSON:", error);
-  });;
+  });
 
       if (filtered.length === 0) {
         qpContainer.innerHTML = "<p>No question papers found for this exam.</p>";
@@ -105,9 +105,12 @@ if (videoContainer && videoTitle && selected_Exam) {
       console.log("Loaded prep.json:", data);
       console.log("Selected Exam:", selected_Exam);
 
-      const filtered = data.filter(video =>
+      const filtered = data.filter(video =>{
         video.exam?.toLowerCase() === selected_Exam.toLowerCase()
-      );
+    })
+    .catch(error => {
+    console.error("Failed to load JSON:", error);
+  });
 
       if (filtered.length === 0) {
         videoContainer.innerHTML = "<p>No preparation videos found for this exam.</p>";
