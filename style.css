@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
@@ -357,3 +358,364 @@ footer {
 .qp-entry a:hover {
   text-decoration: underline;
 }
+=======
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+  line-height: 1.6;
+ 
+}
+
+
+header {
+  background-color: #0e6fff;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+main h1{
+  color: #0e6fff;
+  position:center;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav ul li a::after{
+    content:inherit;
+    height: 3px;
+    width: 0;
+    background: rgb(248, 247, 247);
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    transition: 0.2s;
+}
+nav ul li a:hover::after {
+    width: 100;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #e6f0ff;
+}
+.card-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      flex: 1;
+      text-align: center;
+      transition: transform 0.3s;
+      margin: 20px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-title {
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+.subject-section {
+  padding: 2rem 1rem;
+}
+
+.subject-section h2 {
+  color: #0e6fff;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.video-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 1rem auto;
+  max-width: 600px;
+}
+
+.video-card iframe {
+  width: 100%;
+  height: 315px;
+  border-radius: 8px;
+  border: none;
+}
+
+.about-section {
+  padding: 2rem 1rem;
+  background-color: #dbefff;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #0e6fff;
+  color: white;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #0e6fff;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+  z-index: 1;
+}
+
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+#searchInput {
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+  display: block;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+.project {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px 50px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform:perspective();
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project h3 {
+    color: #4e54c8;
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #4e54c8;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.project a:hover {
+    background: #8f94fb;
+}
+
+ h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+ .card h2 {
+      margin-top: 0;
+      color: #333;
+    }
+    .card p {
+      color: #555;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+ .card1-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 120px;
+  background-color: #f0f8ff;
+  color: #333;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  background-color: #e0f7ff;
+}
+.video-block {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.video-block h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.video-block {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 1rem auto;
+  max-width: 600px;
+}
+
+.video-block iframe {
+  width: 100%;
+  height: 315px;
+  border-radius: 8px;
+  border: none;
+}
+
+.video-block p {
+  margin-top: -10px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+@media (max-width: 1024px) {
+  body {
+    font-size: 15px;
+    padding: 15px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+}
+
+/* Mobile devices (phones) */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .hero-text, .section {
+    padding: 10px;
+  }
+}
+.qp-entry {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease;
+}
+
+.qp-entry:hover {
+  transform: translateY(-3px);
+}
+
+.qp-entry h3 {
+  margin: 0 0 10px;
+  color: #34495e;
+}
+
+.qp-entry a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.qp-entry a:hover {
+  text-decoration: underline;
+}
+>>>>>>> 5ade1bf81ea4794af1b8d7d160ed77b96c366baf
