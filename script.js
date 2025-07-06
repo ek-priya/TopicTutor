@@ -84,8 +84,6 @@ if (qpContainer && qpTitle && selectedExam) {
       console.error("Error loading QPs:", err);
     });
 }
-const qpTitle = document.getElementById("examTitle");
-const qpContainer = document.getElementById("qpContainer");
 
 if (qpContainer && qpTitle && selectedExam) {
   qpTitle.textContent = `${selectedExam} - Previous Year Question Papers`;
@@ -121,18 +119,18 @@ if (qpContainer && qpTitle && selectedExam) {
 // --------------------------------------
 // Prep Video Page Logic (prep.json)
 // --------------------------------------
-const selectedExam = new URLSearchParams(window.location.search).get("exam");
+const selected_Exam = new URLSearchParams(window.location.search).get("exam");
 const videoTitle = document.getElementById("videoTitle");
 const videoContainer = document.getElementById("videoContainer");
 
-if (videoContainer && videoTitle && selectedExam) {
-  videoTitle.textContent = `${selectedExam} - Preparation Videos`;
+if (videoContainer && videoTitle && selected_Exam) {
+  videoTitle.textContent = `${selected_Exam} - Preparation Videos`;
 
   fetch("data/prep.json")
     .then(res => res.json())
     .then(data => {
       const filtered = data.filter(video =>
-        video.exam?.toLowerCase() === selectedExam.toLowerCase()
+        video.exam?.toLowerCase() === selected_Exam.toLowerCase()
       );
 
       if (filtered.length === 0) {
@@ -141,14 +139,13 @@ if (videoContainer && videoTitle && selectedExam) {
       }
 
       filtered.forEach(video => {
+        
         const div = document.createElement("div");
         div.className = "video-block";
-
         const videosHTML = video.embed_link.map(v => `
-          <iframe width="300" height="200"
-                  src="${v.video}"
-                  frameborder="0" allowfullscreen></iframe>
-        `).join('');
+        <div class="video-responsive">
+    <iframe src="${v.video}" frameborder="0" allowfullscreen></iframe>
+  </div>`).join('');
 
         div.innerHTML = `
           <h3>${video.title}</h3>
