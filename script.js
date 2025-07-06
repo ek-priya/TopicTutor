@@ -95,18 +95,26 @@ const selected_Exam = new URLSearchParams(window.location.search).get("exam");
 const videoTitle = document.getElementById("videoTitle");
 const videoContainer = document.getElementById("videoContainer");
 
+console.log("Selected exam from URL:", selected_Exam);
+console.log("Title element:", videoTitle);
+console.log("Container element:", videoContainer);
+
 if (videoContainer && videoTitle && selected_Exam) {
   videoTitle.textContent = `${selected_Exam} - Preparation Videos`;
 
   fetch("data/prep.json")
-    .then(res => res.json())
+    .then(res => {
+      console.log("Response received:", res);
+      return res.json();
+    })
     .then(data => {
-      console.log("Loaded prep.json:", data);
-      console.log("Selected Exam:", selected_Exam);
+      console.log("Loaded JSON data:", data);
 
       const filtered = data.filter(video =>
         video.exam?.toLowerCase() === selected_Exam.toLowerCase()
-    );
+      );
+
+      console.log("Filtered videos:", filtered);
 
       if (filtered.length === 0) {
         videoContainer.innerHTML = "<p>No preparation videos found for this exam.</p>";
@@ -136,5 +144,5 @@ if (videoContainer && videoTitle && selected_Exam) {
       console.error("Error loading videos:", err);
     });
 } else {
-  console.warn("Page loaded without selectedExam in URL or missing DOM elements");
+  console.warn("Missing URL param or elements.");
 }
