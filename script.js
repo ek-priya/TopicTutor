@@ -58,15 +58,13 @@ if (qpContainer && qpTitle && selectedExam) {
   qpTitle.textContent = `${selectedExam} - Previous Year Question Papers`;
 
   fetch("data/qps.json")
-  
-    
     .then(res => res.json())
     .then(data => {
-      console.log("Loaded prep.json data:", data);
+      console.log("Loaded qps.json data:", data);
+
       const filtered = data.filter(qp =>
         qp.exam?.toLowerCase() === selectedExam.toLowerCase()
-    );
-      
+      );
 
       if (filtered.length === 0) {
         qpContainer.innerHTML = "<p>No question papers found for this exam.</p>";
@@ -87,34 +85,26 @@ if (qpContainer && qpTitle && selectedExam) {
       qpContainer.innerHTML = "<p>Failed to load question papers.</p>";
       console.error("Error loading QPs:", err);
     });
-    
 }
 
-// ----
-const selected_Exam = new URLSearchParams(window.location.search).get("exam");
+// --------------------------------------
+// Prep Video Page Logic (prep.json)
+// --------------------------------------
 const videoTitle = document.getElementById("videoTitle");
 const videoContainer = document.getElementById("videoContainer");
 
-console.log("Selected exam from URL:", selected_Exam);
-console.log("Title element:", videoTitle);
-console.log("Container element:", videoContainer);
-
-if (videoContainer && videoTitle && selected_Exam) {
-  videoTitle.textContent = `${selected_Exam} - Preparation Videos`;
+if (videoContainer && videoTitle && selectedExam) {
+  videoTitle.textContent = `${selectedExam} - Preparation Videos`;
 
   fetch("data/prep.json")
-    .then(res => {
-      console.log("Response received:", res);
-      return res.json();
-    })
+    .then(res => res.json())
     .then(data => {
-      console.log("Loaded JSON data:", data);
+      console.log("Loaded prep.json:", data);
+      console.log("Selected Exam:", selectedExam);
 
       const filtered = data.filter(video =>
-        video.exam?.toLowerCase() === selected_Exam.toLowerCase()
+        video.exam?.toLowerCase() === selectedExam.toLowerCase()
       );
-
-      console.log("Filtered videos:", filtered);
 
       if (filtered.length === 0) {
         videoContainer.innerHTML = "<p>No preparation videos found for this exam.</p>";
@@ -144,5 +134,5 @@ if (videoContainer && videoTitle && selected_Exam) {
       console.error("Error loading videos:", err);
     });
 } else {
-  console.warn("Missing URL param or elements.");
+  console.warn("Page loaded without selectedExam in URL or missing DOM elements");
 }
