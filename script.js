@@ -85,37 +85,6 @@ if (qpContainer && qpTitle && selectedExam) {
     });
 }
 
-if (qpContainer && qpTitle && selectedExam) {
-  qpTitle.textContent = `${selectedExam} - Previous Year Question Papers`;
-
-  fetch("data/qps.json")
-    .then(res => res.json())
-    .then(data => {
-      const filtered = data.filter(qp =>
-        qp.exam?.toLowerCase() === selectedExam.toLowerCase()
-      );
-
-      if (filtered.length === 0) {
-        qpContainer.innerHTML = "<p>No question papers found for this exam.</p>";
-        return;
-      }
-
-      filtered.forEach(qp => {
-        const div = document.createElement("div");
-        div.className = "video-block";
-        div.innerHTML = `
-          <h3>${qp.subject} (${qp.year})</h3>
-          <a href="${qp.link}" target="_blank">📄 View PDF</a>
-          <hr>`;
-        qpContainer.appendChild(div);
-      });
-    })
-    .catch(err => {
-      qpContainer.innerHTML = "<p>Failed to load question papers.</p>";
-      console.error("Error loading QPs:", err);
-    });
-}
-
 // --------------------------------------
 // Prep Video Page Logic (prep.json)
 // --------------------------------------
@@ -139,7 +108,7 @@ if (videoContainer && videoTitle && selected_Exam) {
       }
 
       filtered.forEach(video => {
-        
+
         const div = document.createElement("div");
         div.className = "video-block";
         const videosHTML = video.embed_link.map(v => `

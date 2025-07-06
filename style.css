@@ -308,6 +308,15 @@ footer {
     flex-direction: column;
   }
 }
+@media (max-width: 600px) {
+  h3 {
+    font-size: 18px;
+  }
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+}
 
 /* Mobile devices (phones) */
 @media (max-width: 768px) {
